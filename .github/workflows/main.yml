@@ -35,8 +35,12 @@ jobs:
       # Build and run Docker Compose
       - name: Build and Run Docker Compose
         run: |
-          docker-compose -f docker-compose.yml up --build -d
-
+          docker-compose -f  up 
+          
+      # Push Docker Compose images
+      - name: Push Docker Compose Images
+        run: |
+          docker-compose -f  push
 
 
       # Stop and remove the containers after the job
